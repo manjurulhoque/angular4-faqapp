@@ -1,0 +1,10 @@
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        {{ question.text }}
+        <a href="#" class="btn btn-link" style="color: white;" (click)="question.hide = !question.hide">Show</a>
+        <a href="#" class="btn btn-link" style="color: white;" (click)="removeQuestion(question)">Remove</a>
+    </div>
+    <div class="panel-body" [hidden]="question.hide">
+        <p>{{ question.answer }}</p>
+    </div>
+</div>
